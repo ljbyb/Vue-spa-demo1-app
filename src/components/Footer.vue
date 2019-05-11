@@ -2,7 +2,7 @@
     <v-footer dark fixed app>
         <v-bottom-nav
                 :active.sync="bottomNav"
-                :color="mycolor"
+                :color="color"
                 :value="true"
                 absolute
                 dark
@@ -44,7 +44,7 @@
             }
         },
         computed: {
-            mycolor () {
+            color () {
                 switch (this.bottomNav) {
                     case 0: this.$router.replace({path: '/'});
                         return 'deep-orange darken-2';

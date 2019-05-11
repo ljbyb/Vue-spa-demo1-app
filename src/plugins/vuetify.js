@@ -6,9 +6,6 @@ import colors from 'vuetify/es5/util/colors'
 // Translation provided by Vuetify (javascript)
 import zhHans from 'vuetify/es5/locale/zh-Hans'
 
-// 为支持VTextField添加单独的导入
-// import VTextField from 'vuetify';
-
 Vue.use(Vuetify, {
   iconfont: 'md',
   theme: {
@@ -20,5 +17,4 @@ Vue.use(Vuetify, {
     locales: { zhHans},
     current: 'zhHans'
   },
-  // VTextField,
-})
+});

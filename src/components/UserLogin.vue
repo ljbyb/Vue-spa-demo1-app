@@ -39,7 +39,8 @@
         methods: {
             userLogin: function () {
                 this.dialog = false;
-                this.GLOBAL.userName = this.userName;
+                // this.GLOBAL.userName = this.userName;
+                this.$store.dispatch('setUser', this.userName);
             }
         }
     }

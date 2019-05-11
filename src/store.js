@@ -7,6 +7,7 @@ const STORAGE_TODOKEY = 'todos';
 const STORAGE_SPORTTIMEKEY = 'sporttime';
 const STORAGE_SPORTDAYDKEY = 'sportday';
 const STORAGE_RECORDDKEY = 'records';
+const STORAGE_USERKEY = 'user';
 
 function getSportDayDataFromLocal(key) {
     let mapData = new Map();
@@ -26,6 +27,7 @@ const state = {
     sporttime: JSON.parse(localStorage.getItem(STORAGE_SPORTTIMEKEY) || '[]'),
     sportday: getSportDayDataFromLocal(STORAGE_SPORTDAYDKEY),
     records: JSON.parse(localStorage.getItem(STORAGE_RECORDDKEY) || '[]'),
+    user: JSON.parse(localStorage.getItem(STORAGE_USERKEY)),
 };
 
 const mutations = {
@@ -83,6 +85,10 @@ const mutations = {
         state.records[index].score = record.score;
     },
 
+    // 处理登录用户名
+    setUser (state, user) {
+        state.user = user;
+    }
 };
 
 const actions = {
@@ -142,6 +148,13 @@ const actions = {
     editRecord ({ commit }, { index, record }) {
         commit('editRecord', { index, record })
     },
+
+    // 处理登录用户名
+    setUser ({ commit }, user) {
+        if (user.length > 0) {
+            commit('setUser', user)
+        }
+    }
 };
 
 // 定义插件函数，可以在每次mutations处理过程中，添加额外处理，如下面的同步到缓存中。
@@ -158,6 +171,8 @@ const plugins = [store => {
             window.localStorage.setItem(STORAGE_SPORTTIMEKEY, JSON.stringify(state.sporttime));
         } else if (mutation.type.toString().indexOf("Record") !== -1) {
             window.localStorage.setItem(STORAGE_RECORDDKEY, JSON.stringify(state.records));
+        }else if (mutation.type.toString().indexOf("User") !== -1) {
+            window.localStorage.setItem(STORAGE_USERKEY, JSON.stringify(state.user));
         }
     })
 }];

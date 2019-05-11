@@ -6,7 +6,7 @@
     >
         <v-toolbar-side-icon></v-toolbar-side-icon>
         <v-toolbar-title class="white--text">
-            {{ this.GLOBAL.userName.length > 0 ? 'Hi,'+ this.GLOBAL.userName +'!': 'Hi!'}}
+            Hi, {{ this.$store.state.user }}
         </v-toolbar-title>
         <v-spacer></v-spacer>
         <UserLogin/>
