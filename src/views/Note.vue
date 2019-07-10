@@ -2,7 +2,7 @@
     <v-layout row wrap>
         <v-flex text-xs-center>
             <!-- header -->
-            <h1 class="blue--text display-2 font-weight-medium my-3">代办事项</h1>
+<!--            <h1 class="blue&#45;&#45;text display-2 font-weight-medium my-3">代办事项</h1>-->
             <v-card>
                 <v-list class="pa-0">
                     <v-list-tile>

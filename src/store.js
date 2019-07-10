@@ -28,6 +28,7 @@ const state = {
     sportday: getSportDayDataFromLocal(STORAGE_SPORTDAYDKEY),
     records: JSON.parse(localStorage.getItem(STORAGE_RECORDDKEY) || '[]'),
     user: JSON.parse(localStorage.getItem(STORAGE_USERKEY)),
+    mycolor: '#2196f3',
 };
 
 const mutations = {
@@ -88,6 +89,11 @@ const mutations = {
     // 处理登录用户名
     setUser (state, user) {
         state.user = user;
+    },
+
+    // 处理页面主题颜色
+    setColor(state, color) {
+        state.mycolor = color;
     }
 };
 
@@ -154,6 +160,10 @@ const actions = {
         if (user.length > 0) {
             commit('setUser', user)
         }
+    },
+
+    setColor({ commit }, color) {
+        commit('setColor', color);
     }
 };
 

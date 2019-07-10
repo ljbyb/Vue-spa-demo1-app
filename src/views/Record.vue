@@ -20,7 +20,7 @@
                 <template v-slot:activator="{ on }">
 <!--                    <v-btn color="primary" dark class="mb-2" v-on="on">New Item</v-btn>-->
                     <v-btn
-                        color="primary"
+                        color="#00bcd4"
                         dark
                         small
                         fab
@@ -55,7 +55,7 @@
 <!--                                        ref="contenttype"-->
 <!--                                        v-model="editedItem.content"-->
 <!--                                        :rules="[() => !!contentType || 'This field is required']"-->
-<!--                                        :items="contentType"-->
+<!--                                        :headerItems="contentType"-->
 <!--                                        label="Content"-->
 <!--                                        placeholder="Select..."-->
 <!--                                        required-->
@@ -96,7 +96,7 @@
         </v-toolbar>
 <!--        <v-data-table-->
 <!--                :headers="headers"-->
-<!--                :items="desserts"-->
+<!--                :headerItems="desserts"-->
 <!--                :search="search"-->
 <!--                class="elevation-1"-->
 <!--        >-->

@@ -1,7 +1,7 @@
 <template>
     <v-toolbar
             dark
-            :color="mycolor"
+            :color="this.$store.state.mycolor"
             fixed app
     >
         <v-toolbar-side-icon></v-toolbar-side-icon>
@@ -22,14 +22,14 @@
         },
         data () {
             return {
-                bottomNav: 0,
+                // bottomNav: 0,
             }
         },
-        computed: {
-            mycolor () {
-                return 'deep-orange darken-2';
-            }
-        }
+        // computed: {
+        //     mycolor () {
+        //         return 'deep-orange darken-2';
+        //     }
+        // }
     }
 </script>
 

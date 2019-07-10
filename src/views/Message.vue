@@ -34,7 +34,7 @@
   export default {
     data () {
       return {
-        items: [
+        headerItems: [
           { header: 'Today' },
           {
             // avatar: '/static/doc-images/lists/1.jpg',
