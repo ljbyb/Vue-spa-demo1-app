@@ -1,11 +1,11 @@
 Arguments: 
-  /usr/local/bin/node /usr/share/yarn/bin/yarn.js audit --json --non-interactive --no-progress
+  /usr/local/bin/node /home/ljb/.yarn/bin/yarn audit --json --non-interactive --no-progress
 
 PATH: 
   /usr/local/gopath/src/ljb/Vue-spa-demo1-app/node_modules/.bin:/usr/local/gopath/src/ljb/node_modules/.bin:/usr/local/gopath/src/node_modules/.bin:/usr/local/gopath/node_modules/.bin:/usr/local/node_modules/.bin:/usr/node_modules/.bin:/node_modules/.bin:/usr/local/bin:/home/ljb/.yarn/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/go/bin:/usr/local/gopath/bin:/usr/local/protobuf/bin
 
 Yarn version: 
-  1.17.3
+  1.19.1
 
 Node version: 
   11.10.1
@@ -14,8 +14,10 @@ Platform:
   linux x64
 
 Trace: 
-  Error: read ECONNRESET
-      at TLSWrap.onStreamRead (internal/stream_base_commons.js:162:27)
+  Error: https://registry.yarnpkg.com/-/npm/v1/security/audits: ETIMEDOUT
+      at Timeout._onTimeout (/home/ljb/.config/yarn/global/node_modules/yarn/lib/cli.js:141224:19)
+      at listOnTimeout (timers.js:327:15)
+      at processTimers (timers.js:271:5)
 
 npm manifest: 
   {
